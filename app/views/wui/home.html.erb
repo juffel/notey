@@ -8,7 +8,8 @@
 </form>
 <% end %>
 <div>
-<% @taglist.collect do |tag| %>
-    <%= content_tag(:div, tag, :class => 'btn btn-default') %>
+    <p><b>Recently manifested Tags:</b></p>
+<% @manlist.each do |man| %>
+    <%= content_tag :div, man.tag.name+", at "+man.date.to_s %>
 <% end %>
 </div>
