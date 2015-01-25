@@ -1,0 +1,2 @@
+module WuiHelper
+end

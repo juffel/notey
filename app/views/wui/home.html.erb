@@ -1,0 +1,14 @@
+<h1>
+    notey
+</h1>
+<%= form_for Manifestation.new do |f| %>
+<form action="/new" method="POST">
+    <%= f.text_field :tag %>
+    <%= f.submit %>
+</form>
+<% end %>
+<div>
+<% @taglist.collect do |tag| %>
+    <%= content_tag(:div, tag, :class => 'btn btn-default') %>
+<% end %>
+</div>
